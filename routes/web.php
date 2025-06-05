@@ -31,7 +31,6 @@ Route::middleware(['web'])->group(function () {
     Route::get('/logout', [LoginController::class, 'logout'])->name('logout');
 
     Route::middleware(['check.admin'])->group(function () {
-        Route::get('/', fn() => view('welcome'))->name('home');
         Route::post('/telegram/webhook', [TelegramBotController::class, 'handle']);
         Route::get('/users/fetch', [MatchController::class, 'fetch'])->name('users.fetch');
         Route::delete('/users/{id}', [MatchController::class, 'destroy'])->name('users.destroy');
@@ -47,7 +46,15 @@ Route::middleware(['web'])->group(function () {
         Route::resource('products', ProductController::class);
         Route::resource('purchases', PurchaseController::class);
         Route::resource('sales', SaleController::class);
-        Route::resource('cars', CarController::class);
+
+        Route::get('/', [CarController::class, 'index'])->name('cars.index');          // List
+        Route::get('/create', [CarController::class, 'create'])->name('cars.create');   // Create form
+        Route::post('/', [CarController::class, 'store'])->name('cars.store');          // Save new
+        Route::get('/{car}', [CarController::class, 'show'])->name('cars.show');        // Show single
+        Route::get('/{car}/edit', [CarController::class, 'edit'])->name('cars.edit');   // Edit form
+        Route::put('/{car}', [CarController::class, 'update'])->name('cars.update');    // Update existing
+        Route::delete('/{car}', [CarController::class, 'destroy'])->name('cars.destroy');// Delete
+
 
         Route::get('/report', [ReportController::class, 'index'])->name('report.index');
         Route::get('/football', [FootballController::class, 'index']);
