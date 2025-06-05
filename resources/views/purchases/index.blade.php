@@ -5,6 +5,8 @@
 
 @section('content')
 <h2>Qabul qilingan tovarlar</h2>
+<a href="{{ route('purchases.create') }}" class="btn btn-info">Tovar qabul qilish</a>
+<hr>
 
     <table class="table table-bordered">
         <thead>

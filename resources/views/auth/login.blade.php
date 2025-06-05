@@ -38,12 +38,12 @@
 
                         <div class="mb-3">
                             <label for="login" class="form-label">Login</label>
-                            <input type="text" name="login" id="login" class="form-control" placeholder="admin" required>
+                            <input type="text" name="login" id="login" class="form-control" required>
                         </div>
 
                         <div class="mb-3">
                             <label for="password" class="form-label">Parol</label>
-                            <input type="password" name="password" id="password" class="form-control" placeholder="admin" required>
+                            <input type="password" name="password" id="password" class="form-control" required>
                         </div>
 
                         <div class="d-grid">
