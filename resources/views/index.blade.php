@@ -1,7 +1,7 @@
 
 @extends('layouts.app')
 
-@section('title', 'Welcome dashboard')
+@section('title', 'Cars List')
 
 @section('content')
 <div class="d-flex justify-content-between mb-3">
