@@ -13,7 +13,7 @@
         </div>
     @endif
 
-    <form action="{{ route('store') }}" method="POST">
+    <form action="{{ route('cars.store') }}" method="POST">
         @csrf
 
         <div class="mb-3">
@@ -28,7 +28,7 @@
 
         <div class="mb-3">
             <label>Model Year</label>
-            <input type="number" name="model_year" class="form-control" value="{{ old('model_year') }}" required>
+            <input type="text" name="model_year" class="form-control" value="{{ old('model_year') }}" required>
         </div>
 
         <div class="mb-3">
@@ -37,6 +37,6 @@
         </div>
 
         <button type="submit" class="btn btn-success">Save</button>
-        <a href="{{ route('index') }}" class="btn btn-secondary">Cancel</a>
+        <a href="{{ route('cars.index') }}" class="btn btn-secondary">Cancel</a>
     </form>
 @endsection

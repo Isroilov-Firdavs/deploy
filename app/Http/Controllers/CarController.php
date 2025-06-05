@@ -38,7 +38,7 @@ class CarController extends Controller
         $request->validate([
             'make' => 'required|string|max:255',
             'model' => 'required|string|max:255',
-            'model_year' => 'required|digits:4|integer',
+            'model_year' => 'required|string|max:255',
             'car_vin' => 'required|string|max:255|unique:cars,car_vin',
         ]);
 

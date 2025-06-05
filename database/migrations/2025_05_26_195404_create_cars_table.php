@@ -15,7 +15,7 @@ return new class extends Migration
             $table->id();
             $table->string('make');
             $table->string('model');
-            $table->year('model_year');
+            $table->string('model_year');
             $table->string('car_vin')->unique();
             $table->timestamps();
         });
