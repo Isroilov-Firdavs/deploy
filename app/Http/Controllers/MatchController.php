@@ -14,9 +14,10 @@ class MatchController extends Controller
     {
         return view('matches');
     }
+
     public function fetch()
     {
-        $users = MokaroUser::paginate(5);
+        $users = MokaroUser::paginate(10);
         return response()->json($users); // JSON formatda
     }
     // UserAjaxController.php

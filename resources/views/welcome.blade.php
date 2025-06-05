@@ -139,3 +139,6 @@
     </body>
 </html>
 @endsection
+<script>
+    console.log("Welcome to Laravel! If you have any questions, feel free to ask in the community forums or check out the documentation.");
+</script>

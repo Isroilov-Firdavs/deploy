@@ -12,7 +12,7 @@ class CarController extends Controller
      */
     public function index()
     {
-        return Car::latest()->paginate(5);
+        return Car::latest()->paginate(10);
     }
 
     public function store(Request $request)

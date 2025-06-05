@@ -12,6 +12,7 @@ use App\Http\Controllers\Product\PurchaseController;
 use App\Http\Controllers\Product\SaleController;
 use App\Http\Controllers\Product\ReportController;
 use App\Http\Controllers\FootballController;
+use App\Http\Controllers\CarController;
 
 
 /*
@@ -46,6 +47,7 @@ Route::middleware(['web'])->group(function () {
         Route::resource('products', ProductController::class);
         Route::resource('purchases', PurchaseController::class);
         Route::resource('sales', SaleController::class);
+        Route::resource('cars', CarController::class);
 
         Route::get('/report', [ReportController::class, 'index'])->name('report.index');
         Route::get('/football', [FootballController::class, 'index']);
