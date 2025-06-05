@@ -1,5 +1,7 @@
 @extends('layouts.app')
 
+@section('title', 'Edit Car')
+
 @section('content')
     <h2>Car Details</h2>
 
