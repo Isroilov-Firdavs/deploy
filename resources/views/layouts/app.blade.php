@@ -53,7 +53,7 @@
                         >Matches</a>
                     </li>
                     <a
-                        class="nav-link disabled"
+                        class="nav-link"
                         href="{{ route('logout') }}"
                         >Chiqish</a>
                     </li>
