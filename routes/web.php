@@ -13,6 +13,7 @@ use App\Http\Controllers\Product\SaleController;
 use App\Http\Controllers\Product\ReportController;
 use App\Http\Controllers\FootballController;
 use App\Http\Controllers\CarController;
+use App\Http\Controllers\QuestionController;
 
 
 /*
@@ -59,6 +60,10 @@ Route::middleware(['web'])->group(function () {
         Route::get('/report', [ReportController::class, 'index'])->name('report.index');
         Route::get('/football', [FootballController::class, 'index']);
         Route::get('/football/matches', [FootballController::class, 'getMatches'])->name('football.matches');
+
+        Route::resource('questions', QuestionController::class);
+        Route::get('/test', [QuestionController::class, 'showTest'])->name('test.show');
+        Route::post('/test-submit', [QuestionController::class, 'submitTest'])->name('test.submit');
     });
 });
 
